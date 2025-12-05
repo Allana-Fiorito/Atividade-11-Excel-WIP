@@ -5,38 +5,49 @@
     font-size: 110%;
 }
 :root{
-    --azulTeste:     dodgerblue;
-    --vermelhoTeste: firebrick;
-    --verdeTeste:    green;
-    --laranjaTeste:  orange;
-    --amareloTeste:  yellow;
-    --roxoTeste:     violet;
-    --rosaTeste:     deeppink;
-    --botaoGrad: linear-gradient(to top, lime, green);
+    --azulTeste:     #1e90ff;
+    --vermelhoTeste: #b22222;
+    --verdeTeste:    #008000;
+    --laranjaTeste:  #ffa500;
+    --amareloTeste:  #ffff00;
+    --roxoTeste:     #ee82ee;
+    --rosaTeste:     #ff1493;
+    --botaoGrad: linear-gradient(to top, #00ff00, #008000);
     --botaoGradHover: linear-gradient(to top, #a0ff95, #2bff00);
-    --margemSessoes: 5% 15% 5% 15%;
+    --margemSessoes: 30px 20% 30px 20%;
 }
 
 .section1, .section3, .section4, .section5{
     text-align: justify;
     justify-content: center;
 }
-header, .section1{
+header, .section1, .video, .section3, .section4 h1, .section5, footer{
     display: flex;
-    align-items: center;
     flex-direction: column;
-}
-header{/*🟦*/
-    width: 100%;
-    height: 10vh;
-    background-color: var(--azulTeste);
-}
-.section1{/*🔴*/
-    height: auto;
-    background-color: var(--vermelhoTeste);
+    justify-content: center;
+    align-items: center;
 }
 .section1 p, .section3 p, .section4 p, .section5 p{
     padding: var(--margemSessoes);
+}
+header{
+    div{
+        height: auto;
+        background-image: linear-gradient(to bottom,
+            rgb(0, 135, 138),
+            rgb(0, 184, 187));
+        font-size: 250%;
+        color: transparent;
+        background-clip: text;
+    }
+    width: 100%;
+    height: 20vh;
+    background-image: linear-gradient(to top, turquoise , paleturquoise);
+}
+.section1{
+    height: auto;
+    background-color: paleturquoise;
+    color: rgb(12, 34, 34);
 }
 .capitular{
     float: left;
@@ -47,10 +58,12 @@ header{/*🟦*/
     text-indent: 10px;
 }
 .txt2section1{
+    text-indent: 10px;
     font-size: 100%;
 }
 video{
-    width: 70vw;
+    width: 50vw;
+    padding: 0 30% 0 30%;
 }
 button{
     background-image: var(--botaoGrad);
@@ -67,22 +80,91 @@ a{
     margin-bottom: 30px;
     text-decoration: none;
 }
-.section2{/*🩷*/
-    background-color: var(--rosaTeste);
+.section2{
+    background-color: beige;
 }
-.section3{/*🟪*/
-    background-color: var(--roxoTeste);
+.section3{
+    background-color: paleturquoise;
+    color: rgb(12, 34, 34);
 }
-.biografia{
-    /* flex-direction: row; */
-    text-align: none;
+.section3 p{
+    text-indent: 30px;
 }
-.section4{/*🟢*/
-    background-color: var(--verdeTeste);
+.txtColorido{
+    color: red;
 }
-.section5{/*🟡*/
-    background-color: var(--amareloTeste);
+.caricatura{
+    width: 125px;
+    height: 200px;
+    float: right;
+    background-image: url(giocondo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: 20px;
 }
-footer{/*🟧*/
-    background-color: var(--laranjaTeste);
+.telaExcel{
+    width: 936px;
+    height: 701px;
+    border-radius: 10px;
+    background-image: url(tela_excel.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 50px;
+}
+.section4{
+    background-color: rgb(36, 216, 207);
+    color: rgb(12, 34, 34);
+    padding-bottom: 50px;
+}
+.section4 p{
+    padding: var(--margemSessoes);
+}
+.section4 ul{
+    padding-left: 25%;
+    font-size: 100%;
+    list-style: none;
+}
+.check li::before{
+    content: "✅";
+}
+.correio li::before{
+    content: "📪";
+}
+.section5{
+    background-color: paleturquoise;
+    color: rgb(12, 34, 34);
+    padding-bottom: 45px;
+    .LealLogo{
+        margin-top: 15px;
+        width: 250px;
+        height: 250px;
+        background-image: url(SELO-LEALQUALITY.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    p{
+        padding-top: 0;
+    }
+    .precos{
+        text-align: center;
+    }
+    .textoMaior{
+        font-size: 130%;
+    }
+    .precoOriginal{
+        font-size: 150%;
+        padding-bottom: 0;
+    }
+    .desconto{
+        font-size: 300%;
+    }
+}
+footer{
+    height: 200px;
+    row-gap: 10px;
+    background-color: turquoise;
+    color: rgb(12, 34, 34);
+    background-image: linear-gradient(to bottom, turquoise , paleturquoise);
 }
