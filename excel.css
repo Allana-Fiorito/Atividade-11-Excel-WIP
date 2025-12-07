@@ -5,65 +5,23 @@
     font-size: 110%;
 }
 :root{
-    --azulTeste:     #1e90ff;
-    --vermelhoTeste: #b22222;
-    --verdeTeste:    #008000;
-    --laranjaTeste:  #ffa500;
-    --amareloTeste:  #ffff00;
-    --roxoTeste:     #ee82ee;
-    --rosaTeste:     #ff1493;
     --botaoGrad: linear-gradient(to top, #00ff00, #008000);
     --botaoGradHover: linear-gradient(to top, #a0ff95, #2bff00);
+    --fundoGrad: linear-gradient(darkturquoise, paleturquoise 10%, paleturquoise 90%, darkturquoise);
     --margemSessoes: 30px 20% 30px 20%;
 }
-
-.section1, .section3, .section4, .section5{
-    text-align: justify;
-    justify-content: center;
-}
-header, .section1, .video, .section3, .section4 h1, .section5, footer{
+header, .section1, .video, .section2, .container, .titulo, div[class^="quadro"], .section3, .section4 h1, .section5, footer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    text-align: justify;
+    justify-content: center;
 }
 .section1 p, .section3 p, .section4 p, .section5 p{
     padding: var(--margemSessoes);
 }
-header{
-    div{
-        height: auto;
-        background-image: linear-gradient(to bottom,
-            rgb(0, 135, 138),
-            rgb(0, 184, 187));
-        font-size: 250%;
-        color: transparent;
-        background-clip: text;
-    }
-    width: 100%;
-    height: 20vh;
-    background-image: linear-gradient(to top, turquoise , paleturquoise);
-}
-.section1{
-    height: auto;
-    background-color: paleturquoise;
-    color: rgb(12, 34, 34);
-}
-.capitular{
-    float: left;
-    line-height: 0.5;
-    font-size: 400%;
-}
-.txt1section1{
-    text-indent: 10px;
-}
-.txt2section1{
-    text-indent: 10px;
-    font-size: 100%;
-}
-video{
-    width: 50vw;
-    padding: 0 30% 0 30%;
+.txtColorido{
+    color: red;
 }
 button{
     background-image: var(--botaoGrad);
@@ -72,69 +30,204 @@ button{
     border-radius: 20px;
     color: white;
     text-shadow: 0 5px 5px darkgreen;
+    box-shadow: 0 10px 20px #0081839a;
 }
 button:hover{
     background-image: var(--botaoGradHover);
+    text-shadow: 0 5px 5px rgba(0, 100, 0, 0.548);
 }
-a{
-    margin-bottom: 30px;
-    text-decoration: none;
+header{
+    div{
+        height: auto;
+        background-image: linear-gradient(to bottom,
+            #009b9e,
+            rgb(44, 209, 193));
+        font-size: 300%;
+        color: transparent;
+        background-clip: text;
+        text-align: center;
+        filter: drop-shadow(0 5px 2px #75fdf0);
+    }
+    width: 100%;
+    height: 20vh;
+    background-image: linear-gradient(to top, darkturquoise, turquoise 20%, #99f8ef);
+}
+.section1{
+    padding: 10px 0 100px 0;
+    height: auto;
+    background-image: var(--fundoGrad);
+    color: rgb(14, 59, 59);
+    .capitular{
+        float: left;
+        line-height: 0.5;
+        font-size: 400%;
+    }
+    .txt1section1{
+        margin-top: 50px;
+        text-indent: 10px;
+    }
+    .txt2section1{
+        text-indent: 20px;
+        font-size: 100%;
+    }
+    video{
+        width: 50vw;
+        box-shadow: 0 10px 20px #0081839a;
+    }
+    a{
+        text-decoration: none;
+    }
 }
 .section2{
-    background-color: beige;
+    padding: 100px 0 100px 0;
+    background-image: var(--fundoGrad);
+    h1{
+        width: 100%;
+        text-align: center;
+        font-size: 180%;
+    }
+    .titulo{
+        width: 100%;
+        padding: var(--margemSessoes);
+    }
+    .container{
+        width: 100%;
+        flex-direction: row;
+        gap: 15px;
+        flex-wrap: wrap;
+        div[class^="quadro"]{
+            width: 29%;
+            height: 300px;
+            border-radius: 30px;
+            border-style: double;
+            border-width: 10px;
+            border-color: #008b8d;
+            text-align: center;
+            font-size: 90%;
+            box-shadow: 0 10px 20px #0081839a;
+            p{
+                padding: 10px;
+            }
+        }
+        .quadro1{
+            background-color: #59f1cb;
+            .imagem1{
+                width: 150px;
+                height: 150px;
+                background-image: url(figura1.png);
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+        }
+        .quadro2{
+            background-color: #96fce2;
+            .imagem2{
+                width: 150px;
+                height: 150px;
+                background-image: url(figura2.png);
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+        }
+        .quadro3{
+            background-color: #59f1cb;
+            .imagem3{
+                width: 150px;
+                height: 150px;
+                background-image: url(figura3.png);
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+        }
+        .quadro4{
+            background-color: #96fce2;
+            .imagem4{
+                width: 150px;
+                height: 150px;
+                background-image: url(figura4.png);
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+        }
+        .quadro5{
+            background-color: #59f1cb;
+            .imagem5{
+                width: 150px;
+                height: 150px;
+                background-image: url(figura6.png);
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+        }
+        .quadro6{
+            background-color: #96fce2;
+            .imagem6{
+                width: 150px;
+                height: 150px;
+                background-image: url(figura6.png);
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+        }
+    }
 }
 .section3{
-    background-color: paleturquoise;
-    color: rgb(12, 34, 34);
-}
-.section3 p{
-    text-indent: 30px;
-}
-.txtColorido{
-    color: red;
-}
-.caricatura{
-    width: 125px;
-    height: 200px;
-    float: right;
-    background-image: url(giocondo.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin-left: 20px;
-}
-.telaExcel{
-    width: 936px;
-    height: 701px;
-    border-radius: 10px;
-    background-image: url(tela_excel.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 50px;
+    padding: 50px 0 100px 0;
+    background-image: var(--fundoGrad);
+    color: rgb(14, 59, 59);
+    .caricatura{
+        width: 125px;
+        height: 200px;
+        float: right;
+        background-image: url(giocondo.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-left: 20px;
+    }
+    p{
+        text-indent: 20px;
+    }
+    .telaExcel{
+        width: 1200px;
+        height: 900px;
+        border-radius: 10px;
+        background-image: url(tela_excel.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: 0 10px 20px #0081839a;
+    }
 }
 .section4{
-    background-color: rgb(36, 216, 207);
-    color: rgb(12, 34, 34);
-    padding-bottom: 50px;
-}
-.section4 p{
-    padding: var(--margemSessoes);
-}
-.section4 ul{
-    padding-left: 25%;
-    font-size: 100%;
-    list-style: none;
-}
-.check li::before{
-    content: "✅";
-}
-.correio li::before{
-    content: "📪";
+    padding: 50px 0 100px 0;
+    background-image: var(--fundoGrad);
+    color: #0e3b3b;
+    p{
+        text-indent: 20px;
+    }
+    ul{
+        padding-left: 25%;
+        font-size: 100%;
+        list-style: none;
+    }
+    .check li::before{
+        content: "✅";
+    }
+    .correio li::before{
+        content: "📪";
+    }
 }
 .section5{
-    background-color: paleturquoise;
-    color: rgb(12, 34, 34);
-    padding-bottom: 45px;
+    padding: 100px 0 150px 0;
+    background-image: var(--fundoGrad);
+    color: #0e3b3b;
     .LealLogo{
         margin-top: 15px;
         width: 250px;
@@ -146,6 +239,7 @@ a{
     }
     p{
         padding-top: 0;
+        text-indent: 20px;
     }
     .precos{
         text-align: center;
@@ -162,9 +256,11 @@ a{
     }
 }
 footer{
+    text-shadow: 0 2px 5px #008183;
+    padding: 15px 0 15px 0;
     height: 200px;
     row-gap: 10px;
     background-color: turquoise;
-    color: rgb(12, 34, 34);
-    background-image: linear-gradient(to bottom, turquoise , paleturquoise);
+    color: #0e3b3b;
+    background-image: linear-gradient(to bottom, darkturquoise, turquoise 20%, #99f8ef);
 }
